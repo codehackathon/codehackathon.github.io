@@ -1,0 +1,47 @@
+@import "base"
+@import "navbar"
+
+html, body, #wrapper
+	background: #FFF
+	border: none
+	box-sizing: border-box
+	font-family: $sans-serif
+	min-height: 100%
+	margin: 0
+	outline: none
+	padding: 0
+	width: 100%
+	transition: all 0.3 ease-in-out
+
+body
+	overflow-y: scroll
+
+::selection
+	background: $primary-color
+
+::-moz-selection
+	background: $primary-color
+
+a, a:link, a:hover, a:focus
+	outline: none
+	transition: all 0.3 ease-in-out
+
+h1, h2, h3, h4, h5, h6
+	font-family: $serif
+
+.slide
+	box-sizing: border-box
+	margin: 0 auto
+	min-height: 100vh
+	padding: 5rem 1.5rem 3rem
+	width: 100%
+
+#wip
+	margin: 2rem auto
+	width: 80%
+	img
+		width: 150px
+		display: block
+		margin: 0 auto
+	h1, h2, h3, h4
+		text-align: center

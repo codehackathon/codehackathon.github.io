@@ -1,0 +1,99 @@
+.navbar {
+  background: #d6ebf2;
+  margin-top: -500px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.navbar .navbar-brand {
+  color: #394244;
+  padding: 10px;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+.navbar .navbar-toggler {
+  border: none;
+  outline: none;
+}
+.navbar .navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.navbar .nav-item {
+  border-radius: 5rem;
+  border: 1px solid #D6EBF2;
+}
+.navbar .nav-item:hover {
+  border: 1px solid #9CCFE0;
+}
+.navbar .navbar-nav .nav-link, .navbar .nav-item.active .nav-link, .navbar .nav-item:hover .nav-link {
+  padding: 1rem 1.5rem;
+  color: #394244;
+}
+.navbar .active {
+  background: #9CCFE0;
+  border-radius: 5rem;
+  border: 1px solid #9CCFE0;
+  color: #394244;
+}
+
+.logo-title {
+  line-height: 40px;
+  padding: 0 5px;
+}
+
+html, body, #wrapper {
+  background: #FFF;
+  border: none;
+  box-sizing: border-box;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  min-height: 100%;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  width: 100%;
+  transition: all 0.3 ease-in-out;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+::selection {
+  background: #D6EBF2;
+}
+
+::-moz-selection {
+  background: #D6EBF2;
+}
+
+a, a:link, a:hover, a:focus {
+  outline: none;
+  transition: all 0.3 ease-in-out;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+}
+
+.slide {
+  box-sizing: border-box;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 5rem 1.5rem 3rem;
+  width: 100%;
+}
+
+#wip {
+  margin: 2rem auto;
+  width: 80%;
+}
+#wip img {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+#wip h1, #wip h2, #wip h3, #wip h4 {
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

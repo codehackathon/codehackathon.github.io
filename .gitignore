@@ -1,0 +1,33 @@
+# Created by https://www.gitignore.io/api/sass,sublimetext,visualstudiocode
+# Edit at https://www.gitignore.io/?templates=sass,sublimetext,visualstudiocode
+
+### Sass ###
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+### SublimeText ###
+# Cache files for Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# Workspace files are user-specific
+*.sublime-workspace
+
+### VisualStudioCode ###
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+
+# End of https://www.gitignore.io/api/sass,sublimetext,visualstudiocode
+
+### Additional ###
+misc/
