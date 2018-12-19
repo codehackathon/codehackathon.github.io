@@ -11,6 +11,15 @@
   font-size: 1.1rem;
   line-height: 1.5rem;
 }
+.navbar .navbar-brand img {
+  width: 100px;
+  height: 100px;
+}
+.navbar .navbar-brand span {
+  font-family: "Playfair Display", serif;
+  line-height: 100px;
+  padding: 0 5px;
+}
 .navbar .navbar-toggler {
   border: none;
   outline: none;
@@ -36,11 +45,6 @@
   color: #394244;
 }
 
-.logo-title {
-  line-height: 40px;
-  padding: 0 5px;
-}
-
 html, body, #wrapper {
   background: #FFF;
   border: none;
@@ -55,7 +59,7 @@ html, body, #wrapper {
 }
 
 body {
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 ::selection {
@@ -75,25 +79,21 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", serif;
 }
 
-.slide {
-  box-sizing: border-box;
-  margin: 0 auto;
+#Intro h1, #Intro h3 {
+  text-align: center;
+}
+#Intro p {
+  text-align: left;
+  padding: 20px 0;
+}
+#Intro .cc {
+  padding: 3rem 0;
   min-height: 100vh;
-  padding: 5rem 1.5rem 3rem;
-  width: 100%;
+  background: #FFF;
 }
 
-#wip {
-  margin: 2rem auto;
-  width: 80%;
-}
-#wip img {
-  width: 150px;
-  display: block;
-  margin: 0 auto;
-}
-#wip h1, #wip h2, #wip h3, #wip h4 {
-  text-align: center;
+#landing-logo {
+  max-width: 150px;
 }
 
 /*# sourceMappingURL=style.css.map */
