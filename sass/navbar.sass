@@ -1,55 +1,56 @@
 @import "base"
+
 // Custom navbar settings
-
 .navbar
-    background: rgba($primary-dark, 1)
-    box-shadow: 0 0 100px rgba($off-light, 0.5)
-    margin-top: -100vh
-    text-align: center
-    transition: all 0.3s ease
+	background: rgba($primary-dark, 1)
+	box-shadow: 0 0 100px rgba($off-light, 0.5)
+	margin-top: -150vh
+	text-align: center
+	transition: all 0.3s ease
+	.navbar-brand
+		img
+			height: 100px
+			width: 100px
 
-    .navbar-brand
-        img
-            height: 100px
-            width: 100px
+	.navbar-toggler
+		border: none
+		outline: none
+		.navbar-toggler-icon
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(200, 164, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
 
-    .navbar-toggler
-        border: none
-        outline: none
-        .navbar-toggler-icon
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(200, 164, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
+	.nav-item
+		&.active, &.active:hover
+			.nav-link
+				border-right: 6px $primary-light double
+				color: $primary-light
+				@media( #{$bp-md})
+					border-bottom: 6px $primary-light double
+					border-right: none
 
-    .nav-item
-        &.active, &.active:hover
-            .nav-link
-                color: $primary-light
-                border-right: 6px $primary-light double
-                @media( #{$bp-md})
-                    border-right: none
-                    border-bottom: 6px $primary-light double
+	.navbar-nav, .nav-item:hover
+		.nav-link
+			border-right: 6px $primary-dark double
+			color: rgba($primary-light, .6)
+			font-family: $serif
+			font-size: 1.7rem
+			margin: .5rem
+			padding: 1rem 1.5rem
+			text-align: right
+			transition: $transition-val
+			@media( #{$bp-md})
+				border-right: none
+				font-size: 1.4rem
 
-    .navbar-nav, .nav-item:hover
-        .nav-link
-            border-right: 6px $primary-dark double
-            color: rgba($primary-light, .6)
-            font-family: $serif
-            font-size: 2rem
-            margin: .5rem
-            padding: 1rem 1.5rem
-            text-align: right
-            transition: $transition-val
-            @media( #{$bp-md})
-                border-right: none
-                font-size: 1.4rem
+	.nav-item:hover .nav-link
+		color: $primary-light
 
-    .nav-item:hover .nav-link
-        color: $primary-light
-
-.navbar-collapse
-    &.collapse
-        transition: $transition-val
-        overflow-y: auto
-        max-height: none
-        height: 100vh
-    &.collapsing
-        height: 0 !important
+// 100% height mobile menu
+@media( #{$bp-sm})
+	.navbar-collapse
+		&.collapse
+			height: 100vh
+			max-height: none
+			overflow-y: auto
+			transition: $transition-val
+		&.collapsing
+			height: 0 !important
