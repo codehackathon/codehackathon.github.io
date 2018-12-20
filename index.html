@@ -8,7 +8,24 @@
 	<!-- TODO: Add OG tags -->
 	<!-- Reference: https://gethead.info/ -->
 	
-	<!-- TODO: Create Favicon -->
+	<!-- Favicon & Theme -->
+	<link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="assets/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="assets/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#12002D">
+	<meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#12002D">
 	
 	<title>Code Hackathon | GITAM</title>
 	
@@ -28,8 +45,7 @@
 		<!-- Navigation section -->
 		<nav class="navbar navbar-expand-xl fixed-top">
 			<a class="navbar-brand" href="index.html">
-				<img class="d-inline-block align-top" src="./assets/brand/main-logo.png" alt="CSI Logo">
-				<span>Code Hackathon</span>
+				<img class="d-inline-block align-top" src="./assets/brand/main-logo.png" alt="Code Hackathon">
 			</a>
 			
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#PrimaryMenu" aria-controls="menu" aria-expanded="false" aria-label="Toggle Navigation">
@@ -39,6 +55,9 @@
 			<div id="PrimaryMenu" class="collapse navbar-collapse">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
+						<a class="nav-link" href="#Home">Home</a>
+					</li>
+					<li class="nav-item">
 						<a class="nav-link" href="#Schedule">Schedule</a>
 					</li>
 					<li class="nav-item">
@@ -54,9 +73,9 @@
 			</div>
 		</nav>
 		
-		<div id="Intro" class="container-fluid">
+		<div id="Home" class="container-fluid">
 			<div class="row">
-				<div class="cc col-8 offset-2 col-md-6 offset-md-3 d-flex justify-content-center align-items-center flex-column">
+				<div class="intro-content col-8 offset-2 col-md-6 offset-md-3 d-flex justify-content-center align-items-center flex-column">
 					<div>
 						<img id="landing-logo" src="./assets/brand/main-logo.png" alt="CSI Logo">
 					</div>
@@ -64,11 +83,11 @@
 						<h1>Code Hackathon</h1>
 					</div>
 					<div>
-						<h3>We are a team of students in GITAM that aim to promote coding as being fun, challenging and most of all <u>#NotBoring</u>.</h3>
+						<h3>We are a team of students in GITAM that aim to promote coding as being fun, challenging and most of all <b>#</b><u>NotBoring</u></h3>
 					</div>
 					<div>
 						<p class="lead">
-							In collaboration with the department of CSE, we organize frequent coding competitions called 'CODE HACKATHONS' on a bi-weekly basis on Saturday afternoons (except for during important college events). We may on occasion also take classes to discuss and try out various techniques and challenges to further enhance your skills.
+							In collaboration with the Department of CSE, we organise frequent coding competitions called 'Code Hackathons' on a bi-weekly basis on Saturday afternoons (except for during important college events). We may on occasion also take classes to discuss and try out various programming techniques and challenges to further enhance your skills.
 						</p>
 					</div>
 				</div>
@@ -102,23 +121,9 @@
 					});
 				} else {
 					navbar.css({
-						'margin-top': '-500px'
+						'margin-top': '-100vh'
 					});
 				}
-				
-				// update `.active` for current menu area
-				var fromTop = $(this).scrollTop() + topMenuHeight;
-				var cur = scrollItems.map(function () {
-					if ($(this).offset().top < fromTop) {
-						return this;
-					}
-				});
-				cur = cur[cur.length - 1];
-				var id = cur && cur.length ? cur[0].id : "";
-				menuItems
-				.parent().removeClass("active")
-				.end().filter("[href='#" + id + "']")
-				.parent().addClass("active");
 			});
 			
 			// Close navbar on click
