@@ -2,7 +2,7 @@
 @import "navbar"
 
 html, body, #wrapper
-	background: #FFF
+	background: $off-light
 	border: none
 	box-sizing: border-box
 	font-family: $sans-serif
@@ -22,7 +22,20 @@ body
 ::-moz-selection
 	background: $primary-light
 
+@keyframes backgroundScroll
+	from
+		background-position: 0 0
+	to
+		background-position: -1000px 0px
+
+@-webkit-keyframes backgroundScroll
+	from
+		background-position: 0 0
+	to
+		background-position: -1000px 0
+
 a, a:link, a:hover, a:focus
+	color: $primary-dark
 	outline: none
 	transition: $transition-val
 
@@ -30,18 +43,23 @@ h1, h2, h3, h4, h5, h6
 	font-family: $serif
 
 #Home
+	-webkit-animation-fill-mode: forwards
+	-webkit-animation: backgroundScroll 30s ease-in-out infinite
+	animation-fill-mode: forwards
+	animation: backgroundScroll 30s ease-in-out infinite
+	background-attachment: fixed
 	background-color: $primary-dark
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23490775' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23630063'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E")
+	background-repeat: repeat
+	text-align: center
 	h1, h3
 		color: #FFF
 		padding: 40px 0 0
-		text-align: center
 	h1
 		font-size: 4rem
 	p
 		color: $off-light
 		padding: 20px 0
-		text-align: left
 
 .intro-content
 	min-height: 100vh
@@ -50,3 +68,53 @@ h1, h2, h3, h4, h5, h6
 #landing-logo
 	box-shadow: 0 0 100px rgba($off-light, 0.5)
 	max-width: 150px
+
+#About
+	margin-top: 4rem
+	p
+		font-size: 1.2rem
+		margin-bottom: 4rem
+	ul
+		font-size: 1.2rem
+		margin-bottom: 4rem
+		margin-left: -1rem
+
+#End-Game
+	background-color: #000
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E")
+	padding-bottom: 4rem
+	padding-top: 4rem
+	h2
+		color: $off-light
+		float: left
+	.btn
+		background: $primary-light
+		border-radius: 5px
+		box-shadow: 0 0 100px rgba($off-light, 0.5)
+		color: $primary-dark
+		font-size: 1.4rem
+		&:hover
+			background: rgba($primary-light,.9)
+		@media( #{$bp-md})
+			margin: 0 2rem
+
+#suggestion-grid
+	margin: 3rem auto 5rem
+	.suggestion-card
+		display: block
+		box-sizing: border-box
+		padding: 4rem 2rem
+		margin: 1rem 1.666666%
+		width: 30%
+		float: left
+		border: none
+		border-radius: 2rem
+		box-shadow: 0 5px 10px rgba($off-dark, 0.3)
+		transition: all .3s ease-in-out
+		&:hover
+			background: #FFF
+			box-shadow: 0 10px 30px rgba($off-dark, 0.4)
+		@media( #{$bp-sm})
+			padding: 4rem 2rem
+			width: 100%
+			margin: 1rem auto
