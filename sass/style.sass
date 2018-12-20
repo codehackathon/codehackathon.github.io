@@ -64,6 +64,9 @@ h1, h2, h3, h4, h5, h6
 .intro-content
 	min-height: 100vh
 	padding: 3rem 0
+.jumbotron-content
+	min-height: 50vh
+	padding: 3rem 0
 
 #landing-logo
 	box-shadow: 0 0 100px rgba($off-light, 0.5)
@@ -86,29 +89,35 @@ h1, h2, h3, h4, h5, h6
 	padding-top: 4rem
 	h2
 		color: $off-light
-		float: left
+		display: block
+		text-align: center
+		margin-bottom: 0
 	.btn
 		background: $primary-light
 		border-radius: 5px
 		box-shadow: 0 0 100px rgba($off-light, 0.5)
 		color: $primary-dark
 		font-size: 1.4rem
+		margin: 1rem auto 0
+		position: relative
+		width: 10rem
 		&:hover
 			background: rgba($primary-light,.9)
 		@media( #{$bp-md})
 			margin: 0 2rem
 
 #suggestion-grid
-	margin: 3rem auto 5rem
+	margin: 1rem auto 5rem
+	text-align: right
 	.suggestion-card
 		display: block
 		box-sizing: border-box
-		padding: 4rem 2rem
+		padding: 6rem 2rem 2rem
 		margin: 1rem 1.666666%
 		width: 30%
 		float: left
 		border: none
-		border-radius: 2rem
+		border-radius: 1.2rem
 		box-shadow: 0 5px 10px rgba($off-dark, 0.3)
 		transition: all .3s ease-in-out
 		&:hover
@@ -118,3 +127,48 @@ h1, h2, h3, h4, h5, h6
 			padding: 4rem 2rem
 			width: 100%
 			margin: 1rem auto
+
+#Schedule
+	-webkit-animation-fill-mode: forwards
+	-webkit-animation: backgroundScroll 30s ease-in-out infinite
+	animation-fill-mode: forwards
+	animation: backgroundScroll 30s ease-in-out infinite
+	background-attachment: fixed
+	background-color: $primary-light
+	background-repeat: repeat
+	h1, h3
+		color: $primary-dark
+		padding: 40px 0 0
+	h1
+		font-size: 4rem
+
+#Contact
+	margin-top: 12rem
+	h1
+		color: $primary-dark
+		padding: 40px 0 0
+		font-size: 4rem
+	p
+		font-size: 1.2rem
+		margin: 2rem 0
+	ul
+		font-size: 1.2rem
+		margin: 3rem 0 2rem -1rem
+
+#Team
+	margin: 2rem 0 4rem
+	.col-12
+		padding: 0
+		@media( #{$bp-md})
+			padding: auto
+	table
+		margin: 0 auto
+		width: auto
+		overflow: hidden
+		text-align: center
+		@media( #{$bp-md})
+			border-radius: 1.2rem
+	th, td
+		min-width: 200px
+	h1
+		text-align: center

@@ -150,6 +150,11 @@ h1, h2, h3, h4, h5, h6 {
   padding: 3rem 0;
 }
 
+.jumbotron-content {
+  min-height: 50vh;
+  padding: 3rem 0;
+}
+
 #landing-logo {
   box-shadow: 0 0 100px rgba(245, 250, 251, 0.5);
   max-width: 150px;
@@ -176,7 +181,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 #End-Game h2 {
   color: #f5fafb;
-  float: left;
+  display: block;
+  text-align: center;
+  margin-bottom: 0;
 }
 #End-Game .btn {
   background: #c8a4ff;
@@ -184,6 +191,9 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 100px rgba(245, 250, 251, 0.5);
   color: #12002d;
   font-size: 1.4rem;
+  margin: 1rem auto 0;
+  position: relative;
+  width: 10rem;
 }
 #End-Game .btn:hover {
   background: rgba(200, 164, 255, 0.9);
@@ -195,17 +205,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #suggestion-grid {
-  margin: 3rem auto 5rem;
+  margin: 1rem auto 5rem;
+  text-align: right;
 }
 #suggestion-grid .suggestion-card {
   display: block;
   box-sizing: border-box;
-  padding: 4rem 2rem;
+  padding: 6rem 2rem 2rem;
   margin: 1rem 1.666666%;
   width: 30%;
   float: left;
   border: none;
-  border-radius: 2rem;
+  border-radius: 1.2rem;
   box-shadow: 0 5px 10px rgba(57, 66, 68, 0.3);
   transition: all 0.3s ease-in-out;
 }
@@ -219,6 +230,69 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     margin: 1rem auto;
   }
+}
+
+#Schedule {
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation: backgroundScroll 30s ease-in-out infinite;
+  animation-fill-mode: forwards;
+  animation: backgroundScroll 30s ease-in-out infinite;
+  background-attachment: fixed;
+  background-color: #c8a4ff;
+  background-repeat: repeat;
+}
+#Schedule h1, #Schedule h3 {
+  color: #12002d;
+  padding: 40px 0 0;
+}
+#Schedule h1 {
+  font-size: 4rem;
+}
+
+#Contact {
+  margin-top: 12rem;
+}
+#Contact h1 {
+  color: #12002d;
+  padding: 40px 0 0;
+  font-size: 4rem;
+}
+#Contact p {
+  font-size: 1.2rem;
+  margin: 2rem 0;
+}
+#Contact ul {
+  font-size: 1.2rem;
+  margin: 3rem 0 2rem -1rem;
+}
+
+#Team {
+  margin: 2rem 0 4rem;
+}
+#Team .col-12 {
+  padding: 0;
+}
+@media (min-width: 768px) {
+  #Team .col-12 {
+    padding: auto;
+  }
+}
+#Team table {
+  margin: 0 auto;
+  width: auto;
+  overflow: hidden;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #Team table {
+    border-radius: 1.2rem;
+  }
+}
+#Team th, #Team td {
+  min-width: 200px;
+}
+#Team h1 {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
