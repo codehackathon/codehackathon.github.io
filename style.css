@@ -254,8 +254,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 #Schedule h1, #Contact h1 {
   color: #12002d;
-  padding: 40px 0 0;
-  font-size: 4rem;
+  padding: 2rem 0;
+  font-size: 2.5rem;
 }
 #Schedule h3, #Contact h3 {
   margin-top: 1rem;
@@ -265,9 +265,44 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.2rem;
   margin: 2rem 0;
 }
-#Schedule ul, #Contact ul {
-  font-size: 1.2rem;
-  margin: 3rem 0 2rem -1rem;
+
+#Contact .col-12 {
+  padding: 0;
+}
+@media (min-width: 768px) {
+  #Contact .col-12 {
+    padding: auto;
+  }
+}
+#Contact table {
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  #Contact table {
+    border-radius: 1.2rem;
+  }
+}
+#Contact th {
+  min-width: 160px;
+}
+#Contact td {
+  min-width: 180px;
+}
+#Contact td:last-child {
+  min-width: 240px;
+}
+@media (max-width: 767px) {
+  #Contact {
+    width: 100%;
+  }
+  #Contact .table-col {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .poster {
@@ -285,33 +320,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-#Team {
-  margin: 2rem 0 4rem;
+#FAQ h1 {
+  color: #12002d;
+  padding: 40px 0 0;
+  font-size: 2.5rem;
 }
-#Team .col-12 {
-  padding: 0;
-}
-@media (min-width: 768px) {
-  #Team .col-12 {
-    padding: auto;
-  }
-}
-#Team table {
-  margin: 0 auto;
-  width: auto;
-  overflow: hidden;
-  text-align: center;
-}
-@media (min-width: 768px) {
-  #Team table {
-    border-radius: 1.2rem;
-  }
-}
-#Team th, #Team td {
-  min-width: 200px;
-}
-#Team h1 {
-  text-align: center;
+#FAQ ul {
+  font-size: 1.2rem;
+  margin: 3rem 0 2rem -1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

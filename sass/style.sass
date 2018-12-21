@@ -144,17 +144,39 @@ h1, h2, h3, h4, h5, h6
 	margin-top: 12rem
 	h1
 		color: $primary-dark
-		padding: 40px 0 0
-		font-size: 4rem
+		padding: 2rem 0
+		font-size: 2.5rem
 	h3
 		margin-top: 1rem
 		margin-bottom: 2rem
 	p
 		font-size: 1.2rem
 		margin: 2rem 0
-	ul
-		font-size: 1.2rem
-		margin: 3rem 0 2rem -1rem
+
+#Contact
+	.col-12
+		padding: 0
+		@media( #{$bp-md})
+			padding: auto
+	table
+		margin: 0 auto
+		width: 100%
+		overflow: hidden
+		text-align: left
+		@media( #{$bp-md})
+			border-radius: 1.2rem
+	th
+		min-width: 160px
+	td
+		min-width: 180px
+		&:last-child
+			min-width: 240px
+	@media( #{$bp-sm})
+		width: 100%
+		.table-col
+			width: 100%
+			padding: 0
+			margin: 0
 
 .poster
 	width: 100%
@@ -167,20 +189,12 @@ h1, h2, h3, h4, h5, h6
 	@media( #{$bp-md})
 		border-radius: .5rem
 
-#Team
-	margin: 2rem 0 4rem
-	.col-12
-		padding: 0
-		@media( #{$bp-md})
-			padding: auto
-	table
-		margin: 0 auto
-		width: auto
-		overflow: hidden
-		text-align: center
-		@media( #{$bp-md})
-			border-radius: 1.2rem
-	th, td
-		min-width: 200px
+#FAQ
 	h1
-		text-align: center
+		color: $primary-dark
+		padding: 40px 0 0
+		font-size: 2.5rem
+	ul
+		font-size: 1.2rem
+		margin: 3rem 0 2rem -1rem
+	
