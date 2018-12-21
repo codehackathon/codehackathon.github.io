@@ -206,9 +206,14 @@ h1, h2, h3, h4, h5, h6 {
 
 #suggestion-grid {
   margin: 1rem auto 5rem;
-  text-align: right;
+}
+#suggestion-grid h3 {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 #suggestion-grid .suggestion-card {
+  text-align: right;
   display: block;
   box-sizing: border-box;
   padding: 6rem 2rem 2rem;
@@ -231,39 +236,53 @@ h1, h2, h3, h4, h5, h6 {
     margin: 1rem auto;
   }
 }
-
-#Schedule {
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation: backgroundScroll 30s ease-in-out infinite;
-  animation-fill-mode: forwards;
-  animation: backgroundScroll 30s ease-in-out infinite;
-  background-attachment: fixed;
-  background-color: #c8a4ff;
-  background-repeat: repeat;
+#suggestion-grid #suggest-one {
+  width: 30%;
+  margin: 1rem 35%;
+  padding: 4rem 0;
+  text-align: center;
 }
-#Schedule h1, #Schedule h3 {
-  color: #12002d;
-  padding: 40px 0 0;
-}
-#Schedule h1 {
-  font-size: 4rem;
+@media (max-width: 767px) {
+  #suggestion-grid #suggest-one {
+    width: 100%;
+    margin: 1rem auto;
+  }
 }
 
-#Contact {
+#Schedule, #Contact {
   margin-top: 12rem;
 }
-#Contact h1 {
+#Schedule h1, #Contact h1 {
   color: #12002d;
   padding: 40px 0 0;
   font-size: 4rem;
 }
-#Contact p {
+#Schedule h3, #Contact h3 {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+#Schedule p, #Contact p {
   font-size: 1.2rem;
   margin: 2rem 0;
 }
-#Contact ul {
+#Schedule ul, #Contact ul {
   font-size: 1.2rem;
   margin: 3rem 0 2rem -1rem;
+}
+
+.poster {
+  width: 100%;
+  max-width: 960px;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 7px 15px rgba(57, 66, 68, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+@media (min-width: 768px) {
+  .poster {
+    border-radius: 0.5rem;
+  }
 }
 
 #Team {
