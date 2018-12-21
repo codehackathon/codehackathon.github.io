@@ -77,7 +77,7 @@
 			<div class="row">
 				<div class="intro-content col-8 offset-2 col-md-6 offset-md-3 d-flex justify-content-center align-items-center flex-column">
 					<div>
-						<img id="landing-logo" src="./assets/brand/main-logo.png" alt="CSI Logo">
+						<img id="landing-logo" src="./assets/brand/main-logo-sq.png" alt="CSI Logo">
 					</div>
 					<div>
 						<h1>Code Hackathon</h1>
@@ -103,7 +103,7 @@
 					<h2>How do we do it?</h2>
 					<ul>
 						<li>Challenges are placed in an online interface and must be solved in a specified interval of time.</li>
-						<li>There are <code>6</code> questions consisting of (usually) <code>2 Easy, 2 Medium &amp; 2 Hard</code> questions.</li>
+						<li>There are <code>6</code> questions consisting of (usually) <code>2 Easy, 2 Medium &amp; 2 Hard</code> questions. Try our previous questions in the <code><a href="archive" target="blank">Archive</a></code>.</li>
 						<li>Each question must pass the hidden test cases in addition to the given sample test cases.</li>
 						<li>Each test case has some predefined weightage as a part of the total score of the question, and these may not be equal.</li>
 						<li>The attendees are to attempt these questions in one of the labs assigned.</li>
@@ -166,17 +166,7 @@
 	
 	<script>
 		$(function () {
-			var navbar = $(".navbar")
-			var topMenu = $("#PrimaryMenu"),
-			topMenuHeight = topMenu.outerHeight() + 15,
-			menuItems = topMenu.find("li a"),
-			scrollItems = menuItems.map(function () {
-				var item = $($(this).attr("href"));
-				if (item.length) {
-					return item;
-				}
-			});
-			
+			var navbar = $(".navbar");			
 			$(window).on("scroll", function () {
 				// bring navbar into view
 				if ($(this).scrollTop() >= 50) {
@@ -188,11 +178,6 @@
 						'margin-top': '-150vh'
 					});
 				}
-			});
-			
-			// Close navbar on click
-			$('.nav-link').on('click', function () {
-				$('.navbar-collapse').collapse('hide');
 			});
 		});
 	</script>

@@ -64,9 +64,6 @@ h1, h2, h3, h4, h5, h6
 .intro-content
 	min-height: 100vh
 	padding: 3rem 0
-.jumbotron-content
-	min-height: 50vh
-	padding: 3rem 0
 
 #landing-logo
 	box-shadow: 0 0 100px rgba($off-light, 0.5)
@@ -90,8 +87,8 @@ h1, h2, h3, h4, h5, h6
 	h2
 		color: $off-light
 		display: block
-		text-align: center
 		margin-bottom: 0
+		text-align: center
 	.btn
 		background: $primary-light
 		border-radius: 5px
@@ -109,46 +106,45 @@ h1, h2, h3, h4, h5, h6
 #suggestion-grid
 	margin: 1rem auto 5rem
 	h3
-		text-align: center
-		margin-top: 1rem
 		margin-bottom: 1rem
+		margin-top: 1rem
+		text-align: center
 	.suggestion-card
-		text-align: right
-		display: block
-		box-sizing: border-box
-		padding: 6rem 2rem 2rem
-		margin: 1rem 1.666666%
-		width: 30%
-		float: left
-		border: none
 		border-radius: 1.2rem
+		border: none
 		box-shadow: 0 5px 10px rgba($off-dark, 0.3)
+		box-sizing: border-box
+		display: block
+		float: left
+		margin: 1rem 1.666666%
+		padding: 4rem 0
+		text-align: center
 		transition: all .3s ease-in-out
+		width: 30%
 		&:hover
 			background: #FFF
 			box-shadow: 0 10px 30px rgba($off-dark, 0.4)
 		@media( #{$bp-sm})
-			padding: 4rem 2rem
-			width: 100%
 			margin: 1rem auto
+			width: 100%
 	#suggest-one
-		width: 30%
 		margin: 1rem 35%
 		padding: 4rem 0
 		text-align: center
+		width: 30%
 		@media( #{$bp-sm})
-			width: 100%
 			margin: 1rem auto
+			width: 100%
 
 #Schedule, #Contact
 	margin-top: 12rem
 	h1
 		color: $primary-dark
-		padding: 2rem 0
 		font-size: 2.5rem
+		padding: 2rem 0
 	h3
-		margin-top: 1rem
 		margin-bottom: 2rem
+		margin-top: 1rem
 	p
 		font-size: 1.2rem
 		margin: 2rem 0
@@ -160,9 +156,9 @@ h1, h2, h3, h4, h5, h6
 			padding: auto
 	table
 		margin: 0 auto
-		width: 100%
 		overflow: hidden
 		text-align: left
+		width: 100%
 		@media( #{$bp-md})
 			border-radius: 1.2rem
 	th
@@ -174,27 +170,49 @@ h1, h2, h3, h4, h5, h6
 	@media( #{$bp-sm})
 		width: 100%
 		.table-col
-			width: 100%
-			padding: 0
 			margin: 0
+			padding: 0
+			width: 100%
 
 .poster
-	width: 100%
-	max-width: 960px
+	box-shadow: 0 7px 15px rgba($off-dark, 0.3)
 	display: block
 	margin: 0 auto
+	max-width: 960px
 	overflow: hidden
-	box-shadow: 0 7px 15px rgba($off-dark, 0.3)
 	transition: all .3s ease-in-out
+	width: 100%
 	@media( #{$bp-md})
 		border-radius: .5rem
 
 #FAQ
 	h1
 		color: $primary-dark
-		padding: 40px 0 0
 		font-size: 2.5rem
+		padding: 40px 0 0
 	ul
 		font-size: 1.2rem
 		margin: 3rem 0 2rem -1rem
-	
+
+.event-card
+	box-shadow: 0 5px 10px rgba($off-dark, 0.3)
+	transition: all .3s ease-in-out
+	box-sizing: border-box
+	border-radius: 1.2rem
+	border: none
+	// display: block
+	float: left
+	margin: 1rem 1%
+	padding: 2rem 0
+	text-align: center
+	width: 48%
+	&:hover
+		box-shadow: 0 10px 30px rgba($off-dark, 0.4)
+	a.badge
+		color: $off-light
+		box-shadow: 0 2px 10px rgba($off-dark, 0.3)
+		&:hover
+			box-shadow: 0 5px 15px rgba($off-dark, 0.4)
+	@media( #{$bp-sm})
+		margin: 1rem auto
+		width: 100%
