@@ -2,23 +2,15 @@
 
 // Custom navbar settings
 .navbar
-	background: -moz-linear-gradient(-135deg, $primary-dark 0%, $primary-dark 55%, #8132ff 100%)
-	background: -webkit-linear-gradient(-135deg, $primary-dark 0%,$primary-dark 55%,#8132ff 100%)
 	background: $primary-dark
 	background: linear-gradient(-135deg, $primary-dark 0%,$primary-dark 55%,#8132ff 100%)
 	box-shadow: 0 0 100px rgba($off-dark, 0.5)
 	text-align: center
 	transition: all 0.3s ease
-	&.hidden-nav
-		box-shadow: 0 0 100px rgba($off-light, 0.5)
-		margin-top: -150vh
 	@media( #{$bp-md})
-		background: -moz-linear-gradient(15deg, $primary-dark 0%, $primary-dark 55%, #8132ff 100%)
-		background: -webkit-linear-gradient(15deg, $primary-dark 0%,$primary-dark 55%,#8132ff 100%)
 		background: linear-gradient(15deg, $primary-dark 0%,$primary-dark 55%,#8132ff 100%)
 	.navbar-brand img
 		height: 60px
-		// width: 60px
 	.navbar-toggler
 		border: none
 		outline: none

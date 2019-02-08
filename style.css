@@ -1,22 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Playfair+Display");
 @import url("https://fonts.googleapis.com/css?family=Lato|Playfair+Display");
 .navbar {
-  background: -moz-linear-gradient(-135deg, #12002d 0%, #12002d 55%, #8132ff 100%);
-  background: -webkit-linear-gradient(-135deg, #12002d 0%, #12002d 55%, #8132ff 100%);
   background: #12002d;
   background: linear-gradient(-135deg, #12002d 0%, #12002d 55%, #8132ff 100%);
   box-shadow: 0 0 100px rgba(57, 66, 68, 0.5);
   text-align: center;
   transition: all 0.3s ease;
 }
-.navbar.hidden-nav {
-  box-shadow: 0 0 100px rgba(245, 250, 251, 0.5);
-  margin-top: -150vh;
-}
 @media (min-width: 768px) {
   .navbar {
-    background: -moz-linear-gradient(15deg, #12002d 0%, #12002d 55%, #8132ff 100%);
-    background: -webkit-linear-gradient(15deg, #12002d 0%, #12002d 55%, #8132ff 100%);
     background: linear-gradient(15deg, #12002d 0%, #12002d 55%, #8132ff 100%);
   }
 }
@@ -148,7 +140,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .intro-content {
   min-height: 100vh;
-  padding: 3rem 0;
+  padding: 3rem;
+}
+.intro-content > div:first-child {
+  margin-top: 5rem;
 }
 
 #landing-logo {
