@@ -57,6 +57,8 @@ h1, h2, h3, h4, h5, h6
 		padding: 40px 0 0
 	h1
 		font-size: 4rem
+		@media( #{$bp-sm})
+			font-size: 3.5rem
 	p
 		color: $off-light
 		padding: 20px 0
@@ -84,6 +86,7 @@ h1, h2, h3, h4, h5, h6
 #landing-logo
 	box-shadow: 0 0 100px rgba($off-light, 0.5)
 	max-width: 150px
+	margin-top: 70px
 
 #About
 	margin-top: 4rem
@@ -132,25 +135,31 @@ h1, h2, h3, h4, h5, h6
 		box-sizing: border-box
 		display: block
 		float: left
-		margin: 1rem 1.666666%
+		margin: 1rem auto
 		padding: 4rem 0
 		text-align: center
 		transition: all .3s ease-in-out
-		width: 30%
+		width: 100%
 		&:hover
 			background: #FFF
 			box-shadow: 0 10px 30px rgba($off-dark, 0.4)
-		@media( #{$bp-sm})
-			margin: 1rem auto
-			width: 100%
+		@media( #{$bp-md})
+			width: 48%
+			margin: 1rem 1%
+		@media( #{$bp-lg})
+			width: 30%
+			margin: 1rem 1.666666%
 	#suggest-one
-		margin: 1rem 35%
+		margin: 1rem auto
 		padding: 4rem 0
 		text-align: center
-		width: 30%
-		@media( #{$bp-sm})
-			margin: 1rem auto
-			width: 100%
+		width: 100%
+		@media( #{$bp-md})
+			margin: 1rem 25%
+			width: 50%
+		@media( #{$bp-lg})
+			margin: 1rem 20%
+			width: 60%
 
 .primary-card
 	color: #FFF
@@ -205,12 +214,13 @@ h1, h2, h3, h4, h5, h6
 	overflow: hidden
 	transition: all .3s ease-in-out
 	width: 100%
-	&.old-pic
-		filter: grayscale(1)
-		&:hover
-			filter: grayscale(0)
 	@media( #{$bp-md})
 		border-radius: .5rem
+
+.old-pic
+	filter: grayscale(1)
+	&:hover
+		filter: grayscale(0)
 
 #FAQ
 	h1
@@ -227,17 +237,16 @@ h1, h2, h3, h4, h5, h6
 	box-sizing: border-box
 	border-radius: 1.2rem
 	border: none
-	// display: block
 	float: left
-	margin: 1rem 1%
-	padding: 2rem 0
+	margin: 1rem auto
+	padding: 2rem .5rem
 	text-align: center
-	width: 48%
+	width: 100%
 	&:hover
 		box-shadow: 0 10px 30px rgba($off-dark, 0.4)
-	@media( #{$bp-sm})
-		margin: 1rem auto
-		width: 100%
+	@media( #{$bp-lg})
+		margin: 1rem 1%
+		width: 48%
 	a.badge
 		color: $off-light
 		box-shadow: 0 2px 10px rgba($off-dark, 0.3)

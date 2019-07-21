@@ -19,7 +19,7 @@
   .navbar .nav-item.active .nav-link, .navbar .nav-item.active:hover .nav-link {
     border-right: 6px #c8a4ff double;
     color: #c8a4ff; }
-@media( min-width: 768px) {
+@media( min-width: 992px) {
   .navbar .nav-item.active .nav-link, .navbar .nav-item.active:hover .nav-link {
     border-bottom: 6px #c8a4ff double;
     border-right: none; } }
@@ -102,6 +102,9 @@ h1, h2, h3, h4, h5, h6 {
     padding: 40px 0 0; }
   #Home h1 {
     font-size: 4rem; }
+@media( max-width: 767px) {
+  #Home h1 {
+    font-size: 3.5rem; } }
   #Home p {
     color: #f5fafb;
     padding: 20px 0; }
@@ -129,7 +132,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #landing-logo {
   box-shadow: 0 0 100px rgba(245, 250, 251, 0.5);
-  max-width: 150px; }
+  max-width: 150px;
+  margin-top: 70px; }
 
 #About {
   margin-top: 4rem; }
@@ -178,27 +182,35 @@ h1, h2, h3, h4, h5, h6 {
     box-sizing: border-box;
     display: block;
     float: left;
-    margin: 1rem 1.666666%;
+    margin: 1rem auto;
     padding: 4rem 0;
     text-align: center;
     transition: all 0.3s ease-in-out;
-    width: 30%; }
+    width: 100%; }
     #suggestion-grid .suggestion-card:hover {
       background: #FFF;
       box-shadow: 0 10px 30px rgba(57, 66, 68, 0.4); }
-@media( max-width: 767px) {
+@media( min-width: 768px) {
   #suggestion-grid .suggestion-card {
-    margin: 1rem auto;
-    width: 100%; } }
+    width: 48%;
+    margin: 1rem 1%; } }
+@media( min-width: 992px) {
+  #suggestion-grid .suggestion-card {
+    width: 30%;
+    margin: 1rem 1.666666%; } }
   #suggestion-grid #suggest-one {
-    margin: 1rem 35%;
+    margin: 1rem auto;
     padding: 4rem 0;
     text-align: center;
-    width: 30%; }
-@media( max-width: 767px) {
+    width: 100%; }
+@media( min-width: 768px) {
   #suggestion-grid #suggest-one {
-    margin: 1rem auto;
-    width: 100%; } }
+    margin: 1rem 25%;
+    width: 50%; } }
+@media( min-width: 992px) {
+  #suggestion-grid #suggest-one {
+    margin: 1rem 20%;
+    width: 60%; } }
 .primary-card {
   color: #FFF;
   background: rgba(72, 38, 155, 0.8);
@@ -253,13 +265,14 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   width: 100%; }
-  .poster.old-pic {
-    filter: grayscale(1); }
-    .poster.old-pic:hover {
-      filter: grayscale(0); }
 @media( min-width: 768px) {
   .poster {
     border-radius: 0.5rem; } }
+.old-pic {
+  filter: grayscale(1); }
+  .old-pic:hover {
+    filter: grayscale(0); }
+
 #FAQ h1 {
   color: #12002d;
   font-size: 2.5rem;
@@ -275,16 +288,16 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 1.2rem;
   border: none;
   float: left;
-  margin: 1rem 1%;
-  padding: 2rem 0;
+  margin: 1rem auto;
+  padding: 2rem 0.5rem;
   text-align: center;
-  width: 48%; }
+  width: 100%; }
   .event-card:hover {
     box-shadow: 0 10px 30px rgba(57, 66, 68, 0.4); }
-@media( max-width: 767px) {
+@media( min-width: 992px) {
   .event-card {
-    margin: 1rem auto;
-    width: 100%; } }
+    margin: 1rem 1%;
+    width: 48%; } }
   .event-card a.badge {
     color: #f5fafb;
     box-shadow: 0 2px 10px rgba(57, 66, 68, 0.3); }
