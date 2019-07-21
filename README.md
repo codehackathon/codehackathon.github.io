@@ -7,7 +7,7 @@
 <h1 align="center">Code Hackathon</h1>
 
 <p align="center">
-  Visit [our website](https://codehackathon.github.io/) for previous questions, winners & schedule.
+  Visit <a href="https://codehackathon.github.io/" target="_blank">our website</a> for previous questions, winners & schedule.
 </p>
 
 ## Contact
