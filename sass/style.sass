@@ -98,8 +98,8 @@ h1, h2, h3, h4, h5, h6
 #End-Game
 	background-color: #000
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E")
-	padding-bottom: 4rem
-	padding-top: 4rem
+	padding-bottom: 12rem
+	padding-top: 12rem
 	h2
 		color: $off-light
 		display: block
@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5, h6
 	.btn
 		background: $primary-light
 		border-radius: 5px
-		box-shadow: 0 0 100px rgba($off-light, 0.5)
+		box-shadow: 0 0 100px 20px rgba($off-light, 0.5)
 		color: $primary-dark
 		font-size: 1.4rem
 		margin: 1rem auto 0
@@ -151,6 +151,13 @@ h1, h2, h3, h4, h5, h6
 		@media( #{$bp-sm})
 			margin: 1rem auto
 			width: 100%
+
+.primary-card
+	color: #FFF
+	background: rgba(72, 38, 155, 0.8)
+	transform: scale(1.05)
+	&:hover
+		background: rgba(72, 38, 155, 0.7)
 
 #Archive, #Leaderboard, #Schedule, #Contact
 	margin-top: 9rem
@@ -198,6 +205,10 @@ h1, h2, h3, h4, h5, h6
 	overflow: hidden
 	transition: all .3s ease-in-out
 	width: 100%
+	&.old-pic
+		filter: grayscale(1)
+		&:hover
+			filter: grayscale(0)
 	@media( #{$bp-md})
 		border-radius: .5rem
 
