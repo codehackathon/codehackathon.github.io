@@ -1,5 +1,11 @@
-# Created by https://www.gitignore.io/api/sass,macos,sublimetext,visualstudiocode
-# Edit at https://www.gitignore.io/?templates=sass,macos,sublimetext,visualstudiocode
+# Created by https://www.gitignore.io/api/sass,macos,jekyll,sublimetext,visualstudiocode
+# Edit at https://www.gitignore.io/?templates=sass,macos,jekyll,sublimetext,visualstudiocode
+
+### Jekyll ###
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
 
 ### macOS ###
 # General
@@ -30,7 +36,6 @@ Temporary Items
 .apdisk
 
 ### Sass ###
-.sass-cache/
 *.css.map
 *.sass.map
 *.scss.map
@@ -78,7 +83,7 @@ GitHub.sublime-settings
 # Ignore all local history of files
 .history
 
-# End of https://www.gitignore.io/api/sass,macos,sublimetext,visualstudiocode
+# End of https://www.gitignore.io/api/sass,macos,jekyll,sublimetext,visualstudiocode
 
 ### Additional ###
 misc/
