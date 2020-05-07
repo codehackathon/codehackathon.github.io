@@ -1,0 +1,64 @@
+---
+layout: jumbo-section
+title: Articles
+clickbait: Check out the best from our community!
+---
+
+<div class="row">
+  <div class="col-10 offset-1 col-md-7 col-md-2">
+  <!-- Loops through paginated posts -->
+  {% for post in paginator.posts %}
+    {% include post_preview.html %}
+  {% endfor %}
+
+  <!-- Pagination links -->
+  {% if paginator.total_pages > 1 %}
+  <nav aria-label="Pagination">
+    <ul class="pagination justify-content-center">
+      {% if paginator.previous_page %}
+      <li class="page-item">
+        <a class="page-link" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">Previous</a>
+      </li>
+      {% endif %}
+      <li class="page-item disabled">
+        <span class="page-link">
+          Page: {{ paginator.page }} of {{ paginator.total_pages }}
+        </a>
+      </li>
+      {% if paginator.next_page %}
+      <li class="page-item">
+        <a class="page-link" href="{{ site.baseurl }}{{ paginator.next_page_path }}">Next</a>
+      </li>
+      {% endif %}
+    </ul>
+  </nav>
+  {% endif %}
+  </div>
+  <div class="col-10 offset-1 col-md-2 py-5">
+    <article>
+      <h4>Categories</h4>
+      <ul class="list-unstyled">
+      {% for category in site.categories %}
+        <li>
+          <a href="/category/{{ category[0] }}">
+            #{{ category[0] | downcase}}
+          </a>
+        </li>
+      {% endfor %}
+      </ul>
+      <h4>Authors</h4>
+      <ul>
+      {% for author in site.authors %}
+        <li>
+          <a href="{{ author.url }}">
+            {{ author.name }}
+          </a>
+        </li>
+      {% endfor %}
+      </ul>
+
+      <h4>Want to see your article here?</h4>
+      <a href="#" class="btn btn-outline-info">Ping us!</a>
+    </article>
+  </div>
+</div>

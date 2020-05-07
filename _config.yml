@@ -1,13 +1,51 @@
-title: Code Hackathon, GITAM
+# Name of your site (displayed in the header)
+name: Code Hackathon, GITAM
+
+# Short bio or description (displayed in the header)
 description: >-
   We are a team of students in GITAM that aim to promote coding as being fun, challenging and above all, not boring. In collaboration with the Department of CSE, we organise frequent coding competitions called 'Code Hackathons' on a bi-weekly basis on Saturday afternoons. We may on occasion also take classes to discuss and try out various programming techniques and challenges to further enhance your skills.
 
-baseurl: ""
-url: "https://codehackathon.github.io/"
+# All links in one place
+social:
+  github: codehackathon
 
+# Enter the UA-* code or skip if not required
+# google_analytics:
+
+# Used for Sitemap.xml and your RSS feed
+url: https://codehackathon.github.io/
+# Add complete URL if setting up as Project website of the form <user/org>.github.io/<repo>/
+
+# Leave baseurl empty when setting up repo for <user/org account>.github.io
+# baseurl: ""
+# Use name preceding with "/" for <user/org>.github.io/<repo>/
+baseurl: ""
+
+# DON'T REMOVE ANYTHING FROM BELOW:
 permalink: /:title
 
+collections:
+  authors:
+    output: true
+  category:
+    output: true
+
 defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: author
+  - scope:
+      path: ""
+      type: "category"
+    values:
+      layout: category
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
   - scope:
       path: ""
     values:
@@ -21,3 +59,22 @@ kramdown:
   auto_ids: true
   hard_wrap: false
   syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+paginate: 10
+paginate_path: /articles/:num/
+
+plugins:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME

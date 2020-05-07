@@ -1,0 +1,72 @@
+---
+layout: default
+---
+
+<div role="main" class="container py-5">
+  <div class="row">
+    <div class="col-10 offset-1 col-md-8 offset-md-2">
+      <article>
+        <h1>{{ page.title }}</h1>
+
+        <div class="article-meta">
+          {% assign author_pic_size = 50 %}
+          {% assign author = site.authors | where: 'short_name', page.author | first %}
+
+          <!-- Profile Picture -->
+          <div class="profile-pic rounded-circle" style="height: {{ author_pic_size }}px;width: {{ author_pic_size }}px;overflow: hidden;padding: 0;">
+            {% if author.social.dp %}
+            <img class="img-fluid" src="{{ author.social.dp }}" alt="{{ author.name }}">
+            {% else %}
+            <div class="dummy-profile" style="height: {{ author_pic_size }}px; width: {{ author_pic_size }}px; padding: 12px;">{{ author.initials }}</div>
+            {% endif %}
+          </div>
+
+          <!-- Written by -->
+          <div class="meta-group author-name">
+            <div class="meta-group-subtitle">
+              Author
+            </div>
+            <div class="meta-group-main">
+              <a href="{{ site.baseurl }}{{ author.url }}" rel="author">{{ author.name }}</a>
+            </div>
+          </div>
+
+          <div class="meta-groups">
+            <!-- Updated by -->
+            {% if page.updated %}
+            <div class="meta-group">
+              <div class="meta-group-subtitle">
+                Updated
+              </div>
+              <div class="meta-group-main">
+                {{ page.updated | date: "%b %e, %Y" }}
+              </div>
+            </div>
+            {% endif %}
+
+            <!-- Published on -->
+            <div class="meta-group">
+              <div class="meta-group-subtitle">
+                Published
+              </div>
+              <div class="meta-group-main">
+                {{ page.date | date: "%b %e, %Y" }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {{ content }}
+
+      </article>
+
+      <hr>
+
+      Categories:
+      {% for category in page.categories %}
+      <a href="{{ site.baseurl }}/category/{{ category }}">#{{ category }}</a>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>

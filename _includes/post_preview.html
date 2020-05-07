@@ -1,0 +1,64 @@
+<div class="post bt-a">
+  {% if post.og-image %}
+  <a href="{{ site.baseurl }}{{ post.url }}">
+    <img src="{{ site.baseurl }}/assets/images/{{post.og-image}}" alt="{{ post.title }}">
+  </a>
+  {% elsif post.og-image-ext %}
+  <a href="{{ site.baseurl }}{{ post.url }}">
+    <img src="{{post.og-image-ext}}" alt="{{ post.title }}">
+  </a>
+  {% endif %}
+  <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+  <p class="lead">
+    {{ post.excerpt }}
+  </p>
+  {% for category in post.categories %}
+  <a class="badge badge-dark" href="{{ site.baseurl }}/category/{{ category }}">#{{ category }}</a>
+  {% endfor %}
+  <div class="article-meta">
+    {% assign author_pic_size = 50 %}
+    {% assign author = site.authors | where: 'short_name', post.author | first %}
+
+    <!-- Written by -->
+    <div class="meta-group author-name">
+      <!-- Profile Picture -->
+      <div class="profile-pic rounded-circle" style="height: {{ author_pic_size }}px;width: {{ author_pic_size }}px;">
+        {% if author.social.dp %}
+        <img class="img-fluid" src="{{ author.social.dp }}" alt="{{ author.name }}">
+        {% else %}
+        <div class="dummy-profile" style="height: {{ author_pic_size }}px; width: {{ author_pic_size }}px; padding: 12px;">{{ author.initials }}</div>
+        {% endif %}
+      </div>
+      <div class="meta-group-subtitle">
+        Author
+      </div>
+      <div class="meta-group-main">
+        <a href="{{ site.baseurl }}{{ author.url }}" rel="author">{{ author.name }}</a>
+      </div>
+    </div>
+
+    <div class="meta-groups">
+      <!-- Updated by -->
+      {% if post.updated %}
+      <div class="meta-group">
+        <div class="meta-group-subtitle">
+          Updated
+        </div>
+        <div class="meta-group-main">
+          {{ post.updated | date: "%b %e, %Y" }}
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- Published on -->
+      <div class="meta-group">
+        <div class="meta-group-subtitle">
+          Published
+        </div>
+        <div class="meta-group-main">
+          {{ post.date | date: "%b %e, %Y" }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

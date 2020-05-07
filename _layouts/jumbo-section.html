@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+{% if page.title %}
+
+<div class="jumbotron jumbotron-fluid bg-light">
+  <div role="main" class="container py-5">
+    <div class="row">
+      <div class="col-10 offset-1 col-md-8 offset-md-2">
+        <h1 class="display-4">{{ page.title }}</h1>
+        {% if page.clickbait %}
+        <p class="lead">
+          {{ page.clickbait }}
+        </p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endif %}
+
+<div role="main" class="container py-5">
+  {{ content }}
+</div>

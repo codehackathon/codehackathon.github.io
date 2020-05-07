@@ -1,0 +1,35 @@
+---
+layout: standalone
+---
+
+{% assign author_pic_size = 50 %}
+
+<div class="author-info">
+<div class="profile-pic rounded-circle" style="height: {{ author_pic_size }}px;width: {{ author_pic_size }}px;overflow: hidden;padding: 0;">
+  {% if page.social.dp %}
+  <img class="img-fluid" src="{{ page.social.dp }}" alt="{{ page.name }}">
+  {% else %}
+  <div class="dummy-profile" style="height: {{ author_pic_size }}px; width: {{ author_pic_size }}px; padding: 12px;">{{ page.initials }}</div>
+  {% endif %}
+</div>
+
+<h4>{{ page.name }}</h6>
+<h5><span>{{ page.position }}</span></h5>
+
+<p class="lead">{{ content }}</p>
+
+<h4>Social:</h4>
+<ul>
+  {% if page.social.email %}<li><a href="mailto:{{ page.social.email }}" target="_blank">Email</a></li>{% endif %}
+  {% if page.social.github %}<li><a href="https://github.com/{{ page.social.github }}" target="_blank">GitHub</a></li>{% endif %}
+  {% if page.social.linkedin %}<li><a href="https://linkedin.com/in/{{ page.social.linkedin }}" target="_blank">LinkedIn</a></li>{% endif %}
+</ul>
+
+</div>
+
+<h2>Posts</h2>
+
+{% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+{% for post in filtered_posts %}
+  {% include post_preview.html %}
+{% endfor %}

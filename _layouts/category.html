@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="jumbotron jumbotron-fluid bg-light">
+  <div role="main" class="container py-5">
+    <div class="row">
+      <div class="col-10 offset-1 col-md-8 offset-md-2">
+        <h5>#{{ page.tag }}</h5>
+        <h1 class="display-4">{{ page.name }}</h1>
+        <p class="lead">
+          {{ content | markdownify }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div role="main" class="container py-5">
+  <div class="row">
+    <div class="col-10 offset-1 col-md-8 offset-md-2">
+      <article>
+        {% for post in site.categories[page.tag] limit:3 %}
+        {% include post_preview.html %}
+        {% endfor %}
+
+        <h3>Complete List:</h3>
+        <ul>
+          {% for post in site.categories[page.tag] %}
+          <li>
+            <strong>{{ page.date | date: "%b %e, %Y" }}: </strong>
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </article>
+    </div>
+  </div>
+</div>

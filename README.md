@@ -10,6 +10,8 @@
   Visit <a href="https://codehackathon.github.io/" target="_blank">our website</a> for previous questions, winners & schedule.
 </p>
 
+> The redesigned, version 2.0 of the website is built upon [AjitZero/jekyll-now-bs4](https://github.com/AjitZero/jekyll-now-bs4).
+
 ## Contact
 
 [Team](https://codehackathon.github.io/contact)

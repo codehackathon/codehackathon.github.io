@@ -1,0 +1,26 @@
+  <nav class="navbar navbar-expand-xl navbar-light bg-light bt-a">
+    <a class="navbar-brand" href="/">{{ site.name }}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#PrimaryMenu" aria-controls="menu" aria-expanded="false" aria-label="Toggle Navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="PrimaryMenu" class="collapse navbar-collapse">
+      <ul role="menubar" class="navbar-nav ml-auto">
+        <li {% if page.url == "{{ site.baseurl }}" %}class="nav-item active"{% else %}class="nav-item"{% endif %}>
+          {% if site.baseurl == "" %}
+          <a class="nav-link" href="/">Home</a>
+          {% else %}
+          <a class="nav-link" href="{{ site.baseurl }}">Home</a>
+          {% endif %}
+        </li>
+        {% for item in site.data.navigation %}
+        <li {% if page.url contains item.link %}class="nav-item active"{% else %}class="nav-item"{% endif %}>
+          <a class="nav-link" href="{{ site.baseurl }}{{ item.link }}">{{ item.name }}</a>
+        </li>
+        {% endfor %}
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/AjitZero/jekyll-now-bs4">GitHub repo</a>
+        </li>
+      </ul>
+    </div>
+  </nav>

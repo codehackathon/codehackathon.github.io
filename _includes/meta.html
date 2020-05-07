@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+  <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {% if page.excerpt %}
+  <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines }}" />
+  <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines }}" />
+  {% else %}
+  <meta name="description" content="{{ site.description }}">
+  <meta property="og:description" content="{{ site.description }}" />
+  {% endif %}
+  <meta name="author" content="{{ site.name }}" />
+  {% if page.title %}
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="twitter:title" content="{{ page.title }}" />
+  {% endif %}
+  {% if page.og-image %}
+  <meta property="og:image" content="{{ site.url }}/assets/images/{{page.og-image}}">
+  {% elsif page.og-image-ext %}
+  <meta property="og:image" content="{{page.og-image-ext}}">
+  {% endif %}
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}">
+
+  <!-- Favicon & Theme -->
+  <link rel="apple-touch-icon" sizes="114x114" href="">
+  <link rel="apple-touch-icon" sizes="120x120" href="">
+  <link rel="apple-touch-icon" sizes="144x144" href="">
+  <link rel="apple-touch-icon" sizes="152x152" href="">
+  <link rel="apple-touch-icon" sizes="180x180" href="">
+  <link rel="apple-touch-icon" sizes="57x57" href="">
+  <link rel="apple-touch-icon" sizes="60x60" href="">
+  <link rel="apple-touch-icon" sizes="72x72" href="">
+  <link rel="apple-touch-icon" sizes="76x76" href="">
+  <link rel="icon" type="image/png" sizes="16x16" href="">
+  <link rel="icon" type="image/png" sizes="192x192"  href="">
+  <link rel="icon" type="image/png" sizes="32x32" href="">
+  <link rel="icon" type="image/png" sizes="96x96" href="">
+  <link rel="manifest" href="">
+  <meta name="msapplication-TileColor" content="#03DAC5"> <!-- HEX Code -->
+  <meta name="msapplication-TileImage" content="">
+  <meta name="theme-color" content="#03DAC5"> <!-- HEX Code -->
