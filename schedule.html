@@ -9,7 +9,7 @@ layout: page
 	<p class="lead">
 		{% unless event.has_ended %}Sign up for {% endunless %}{{ event.title }} 💻 
 		<br />
-		{{ event.date }}, {{ event.time }} at {{ event.venue || default: "ICT-208" }}
+		{{ event.date }}, {{ event.time }} at {{ event.venue | default: "ICT-208" }}
 		<br />
 		Stay tuned for more updates!
 	</p>
