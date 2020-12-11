@@ -119,29 +119,22 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	<script>
-		$(function () {
-			var navbar = $(".navbar")
-			var topMenu = $("#PrimaryMenu"),
-				topMenuHeight = topMenu.outerHeight() + 15,
-				menuItems = topMenu.find("li a"),
-				scrollItems = menuItems.map(function () {
-					var item = $($(this).attr("href"));
-					if (item.length) {
-						return item;
-					}
-				});
-
-			// Close navbar on click
-			$(".nav-link").on("click", function () {
-				$(".navbar-collapse").collapse("hide");
-			});
-		});
-
+		var PrimaryMenu = $("#PrimaryMenu");
+		var navbar = $(".navbar");
 		$(window).bind("scroll", function () {
 			if ($(window).scrollTop() > 50) {
-				$(".navbar").removeClass("bg-transparent");
+				if (!PrimaryMenu.hasClass("show")) {
+					navbar.removeClass("bg-transparent");
+				}
 			} else {
-				$(".navbar").addClass("bg-transparent");
+				if (!PrimaryMenu.hasClass("show")) {
+					navbar.addClass("bg-transparent");
+				}
+			}
+		});
+		$(".navbar-toggler").click(function() {
+			if (navbar.hasClass("bg-transparent")) {
+				navbar.removeClass("bg-transparent");
 			}
 		});
 	</script>
