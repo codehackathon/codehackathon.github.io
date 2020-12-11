@@ -4,12 +4,21 @@ description: Get all event details in one place
 layout: page
 ---
 
+{% assign event = site.data.events[0] %}
 <div class="text-center">
 	<p class="lead">
-		Sign up for Code Hackathon <strong>Week #12</strong> 💻 (12<sup>th</sup> December, 2020). Stay tuned for more Week 12 updates!
+		{% unless event.has_ended %}Sign up for {% endunless %}{{ event.title }} 💻 
+		<br />
+		{{ event.date }}, {{ event.time }} at {{ event.venue || default: "ICT-208" }}
+		<br />
+		Stay tuned for more updates!
 	</p>
 	<br />
-	<a href="https://bit.ly/w12-reg" class="btn btn-info btn-lg text-light" target="_blank">Register</a>
+	{% if event.has_ended %}
+	<span class="btn btn-dark disabled btn-lg text-light">Event completed!</a>
+	{% else %}
+	<a href="{{ event.register_link }}" class="btn btn-info btn-lg text-light" target="_blank">Register</a>
+	{% endif %}
 </div>
 
 <div id="suggestion-grid" class="mt-5">
