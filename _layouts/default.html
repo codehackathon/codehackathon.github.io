@@ -52,7 +52,7 @@
 <body>
 	<div id="wrapper" class="container-fluid">
 		<!-- Navigation section -->
-		<nav class="navbar navbar-expand-xl fixed-top">
+		<nav class="navbar navbar-expand-xl fixed-top bg-transparent">
 			<button
 				aria-controls="menu"
 				aria-expanded="false"
@@ -94,9 +94,7 @@
 			</div>
 		</nav>
 
-		<main>
-			{{ content }}
-		</main>
+		{{ content }}
 	</div>
 
 	<footer id="End-Game" class="container-fluid">
@@ -134,9 +132,17 @@
 				});
 
 			// Close navbar on click
-			$('.nav-link').on('click', function () {
-				$('.navbar-collapse').collapse('hide');
+			$(".nav-link").on("click", function () {
+				$(".navbar-collapse").collapse("hide");
 			});
+		});
+
+		$(window).bind("scroll", function () {
+			if ($(window).scrollTop() > 50) {
+				$(".navbar").removeClass("bg-transparent");
+			} else {
+				$(".navbar").addClass("bg-transparent");
+			}
 		});
 	</script>
 </body>
