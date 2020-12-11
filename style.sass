@@ -90,6 +90,7 @@ h1, h2, h3, h4, h5, h6
 	box-shadow: 0 0 100px rgba($off-light, 0.5)
 	max-width: 150px
 	margin-top: 70px
+	border-radius: 4px
 
 #About
 	margin-top: 4rem
@@ -235,6 +236,12 @@ h1, h2, h3, h4, h5, h6
 		font-size: 1.2rem
 		margin: 3rem 0 2rem -1rem
 
+.event-card-group
+	display: grid
+	gap: 20px 20px
+	@media( #{$bp-md})
+		grid-template-columns: 1fr 1fr
+
 .event-card
 	box-shadow: 0 5px 10px rgba($off-dark, 0.3)
 	transition: all .3s ease-in-out
@@ -242,15 +249,11 @@ h1, h2, h3, h4, h5, h6
 	border-radius: 1.2rem
 	border: none
 	float: left
-	margin: 1rem auto
 	padding: 2rem .5rem
 	text-align: center
 	width: 100%
 	&:hover
 		box-shadow: 0 10px 30px rgba($off-dark, 0.4)
-	@media( #{$bp-lg})
-		margin: 1rem 1%
-		width: 48%
 	a.badge
 		color: $off-light
 		box-shadow: 0 2px 10px rgba($off-dark, 0.3)

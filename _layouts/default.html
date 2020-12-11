@@ -1,1 +1,143 @@
-{{ content }}
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang }}">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- OpenGraph tags -->
+	<meta property="og:description" content="{{ page.description | default: site.description }}">
+	<meta property="og:image" content="{{ site.url }}/assets/brand/main-logo.png">
+	<meta property="og:site_name" content="{{ site.title }}">
+	<meta property="og:title" content="{{ page.title | default: site.title }} · Code Hackathon">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+	<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+
+	<!-- Favicon & Theme -->
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="assets/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+	<link rel="manifest" href="assets/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#12002D">
+	<meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#12002D">
+	<title>
+		{{ page.title | default: site.title }}{% if page.title %} · Code Hackathon, GITAM {% endif %}
+	</title>
+	<!-- Bootstrap core CSS -->
+	<link
+		crossorigin="anonymous"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+		rel="stylesheet"
+	/>
+	<!-- Custom CSS -->
+	<link
+		href="style.css"
+		rel="stylesheet"
+	/>
+</head>
+
+<body>
+	<div id="wrapper" class="container-fluid">
+		<!-- Navigation section -->
+		<nav class="navbar navbar-expand-xl fixed-top">
+			<button
+				aria-controls="menu"
+				aria-expanded="false"
+				aria-label="Toggle Navigation"
+				class="navbar-toggler"
+				data-target="#PrimaryMenu"
+				data-toggle="collapse"
+				type="button"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<a class="navbar-brand" href="/">
+				<img
+					alt="Code Hackathon"
+					class="d-inline-block align-top"
+					src="assets/brand/main-logo.png"
+				/>
+			</a>
+
+			<div id="PrimaryMenu" class="collapse navbar-collapse">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item {% if page.url == "/" %}active{% endif%}">
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item {% if page.url == "/schedule" %}active{% endif%}">
+						<a class="nav-link" href="schedule">Schedule</a>
+					</li>
+					<li class="nav-item {% if page.url == "/archive" %}active{% endif%}">
+						<a class="nav-link" href="archive">Archive</a>
+					</li>
+					<li class="nav-item {% if page.url == "/leaderboard" %}active{% endif%}">
+						<a class="nav-link" href="leaderboard">Leaderboard</a>
+					</li>
+					<li class="nav-item {% if page.url == "/contact" %}active{% endif%}">
+						<a class="nav-link" href="contact">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<main>
+			{{ content }}
+		</main>
+	</div>
+
+	<footer id="End-Game" class="container-fluid">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-10 offset-sm-1 col-md-10 offset-md-1 col-lg-10 offset-lg-1">
+					<h2>
+						Questions? We'd be happy to help!
+						{% if page.url == "/contact" %}
+							👆
+						{% else %}
+							<a href="contact" class="btn">Contact Us</a>
+						{% endif %}
+					</h2>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script>
+		$(function () {
+			var navbar = $(".navbar")
+			var topMenu = $("#PrimaryMenu"),
+				topMenuHeight = topMenu.outerHeight() + 15,
+				menuItems = topMenu.find("li a"),
+				scrollItems = menuItems.map(function () {
+					var item = $($(this).attr("href"));
+					if (item.length) {
+						return item;
+					}
+				});
+
+			// Close navbar on click
+			$('.nav-link').on('click', function () {
+				$('.navbar-collapse').collapse('hide');
+			});
+		});
+	</script>
+</body>
+</html>

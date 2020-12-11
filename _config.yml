@@ -1,9 +1,11 @@
+repo_url: https://github.com/codehackathon/codehackathon.github.io
 title: Code Hackathon, GITAM
 description: >-
   We are a team of students in GITAM that aim to promote coding as being fun, challenging and above all, not boring. In collaboration with the Department of CSE, we organise frequent coding competitions called 'Code Hackathons' on a bi-weekly basis on Saturday afternoons. We may on occasion also take classes to discuss and try out various programming techniques and challenges to further enhance your skills.
+lang: en
 
 baseurl: ""
-url: "https://codehackathon.github.io/"
+url: "https://codehackathon.github.io"
 
 permalink: /:title
 
@@ -21,3 +23,9 @@ kramdown:
   auto_ids: true
   hard_wrap: false
   syntax_highlighter: rouge
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
