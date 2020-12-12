@@ -12,7 +12,7 @@ layout: page
 			<li class="list-group-item d-flex justify-content-between align-items-center">
 				<span class="badge {% if forloop.index == 1 %}badge-warning text-dark{% else %}badge-dark{% endif %}">{{ forloop.index }}</span>
 				{% if forloop.index == 1 %} 👑 {% endif %}{{ winner.name }}
-				<span class="badge badge-dark">{{ winner.class }}</span>
+				<span class="badge badge-dark">{{ winner.class | default: "–" }}</span>
 			</li>
 			{% endfor %}
 		</ul>
