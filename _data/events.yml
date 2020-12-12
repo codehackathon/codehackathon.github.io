@@ -6,9 +6,109 @@
   poster_link: "assets/poster/w12.jpg"
   type: "remote"
   has_ended: false
+
 - title: "Code Hackathon"
   order: "Week #11"
   has_ended: true
   links:
     - title: "Contest"
       url: "https://www.hackerrank.com/week-11-code-hackathon"
+
+- title: "Code Hackathon"
+  order: "Week #10"
+  has_ended: true
+  links:
+    - title: "Contest"
+      url: "https://www.hackerrank.com/week-10-code-hackathon"
+
+- title: "Rookie Hour"
+  order: "#2"
+  has_ended: true
+  links:
+    - title: "Phase I"
+      url: "https://www.hackerrank.com/rookie-hour-2-0-phase-i"
+    - title: "Phase II"
+      url: "https://www.hackerrank.com/rookie-hour-2-0-phase-ii"
+
+- title: "️Women's Hackathon"
+  # order: "#1"
+  has_ended: true
+  links:
+    - title: "Contest"
+      url: "https://www.hackerrank.com/womens-code-hackathon-1"
+
+- title: "Code Hackathon"
+  order: "Week #9"
+  has_ended: true
+  links:
+    - title: "Contest"
+      url: "https://www.hackerrank.com/week-9-code-hackathon"
+
+- title: "Code Hackathon"
+  order: "Week #8"
+  has_ended: true
+  links:
+    - title: "Contest"
+      url: "https://www.hackerrank.com/week-8-code-hackathon"
+
+- title: "Code Hackathon"
+  order: "Week #7"
+  has_ended: true
+  links:
+    - title: "Contest"
+      url: "https://www.hackerrank.com/week-7-codehackathon"
+
+- title: "Rookie Hour"
+  order: "#1"
+  has_ended: true
+  links:
+    - title: "Phase I"
+      url: "https://www.hackerrank.com/rookie-hour-1"
+
+- title: "Code Hackathon"
+  order: "Week #6"
+  has_ended: true
+  links:
+    - title: "Contest 1"
+      url: "https://www.hackerrank.com/week-6-codehackathon-part-i"
+    - title: "Contest 2"
+      url: "https://www.hackerrank.com/week-6-codehackathon-part-ii"
+
+- title: "Code Hackathon"
+  order: "Week #5"
+  has_ended: true
+  links:
+    - title: "Contest"
+      url: "https://www.hackerrank.com/week-5-code-hackathon"
+
+- title: "Code Hackathon"
+  order: "Week #4"
+  has_ended: true
+  links:
+    - title: "Contest"
+      url: "https://www.hackerrank.com/week-4-codehackathon"
+
+- title: "Code Hackathon"
+  order: "Week #3"
+  has_ended: true
+  links:
+    - title: "Questions"
+      url: "assets/archive/week-3/Week-3-Questions.pdf"
+
+- title: "Code Hackathon"
+  order: "Week #2"
+  has_ended: true
+  links:
+    - title: "Questions"
+      url: "assets/archive/week-2/Week-2-Questions.pdf"
+    - title: "Solutions"
+      url: "assets/archive/week-2/Week-2-Solutions.pdf"
+
+- title: "Code Hackathon"
+  order: "Week #1"
+  has_ended: true
+  links:
+    - title: "Questions"
+      url: "assets/archive/week-1/Week-1-Questions.pdf"
+    - title: "Solutions"
+      url: "assets/archive/week-1/Week-1-Solutions.pdf"
