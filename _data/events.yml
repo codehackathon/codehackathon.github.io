@@ -13,6 +13,11 @@
   links:
     - title: "Contest"
       url: "https://www.hackerrank.com/week-11-code-hackathon"
+  winners:
+    - name: "Manohar D.S."
+      class: "2/4, B10"
+    - name: "Sreeram T."
+      class: "2/4, B4"
 
 - title: "Code Hackathon"
   order: "Week #10"
@@ -20,6 +25,11 @@
   links:
     - title: "Contest"
       url: "https://www.hackerrank.com/week-10-code-hackathon"
+  winners:
+    - name: "J. Pavan Kumar"
+      class: "3/4, B12"
+    - name: "Prashast Dwivedi"
+      class: "3/4, B11"
 
 - title: "Rookie Hour"
   order: "#2"
@@ -43,6 +53,11 @@
   links:
     - title: "Contest"
       url: "https://www.hackerrank.com/week-9-code-hackathon"
+  winners:
+    - name: "Ys M Krishna Varda Raj"
+      class: "2/4, B17"
+    - name: "J. Pavan Kumar"
+      class: "3/4, B12"
 
 - title: "Code Hackathon"
   order: "Week #8"
@@ -50,6 +65,13 @@
   links:
     - title: "Contest"
       url: "https://www.hackerrank.com/week-8-code-hackathon"
+  winners:
+    - name: "G. Pavan Kumar"
+      class: "4/4, B2"
+    - name: "Mano Sriram"
+      class: "3/4, B7"
+    - name: "Sanjay Akula"
+      class: "3/4, B18"
 
 - title: "Code Hackathon"
   order: "Week #7"
@@ -57,6 +79,11 @@
   links:
     - title: "Contest"
       url: "https://www.hackerrank.com/week-7-codehackathon"
+  winners:
+    - name: "Krishna Prasad"
+      class: "3/4, B13"
+    - name: "G. Pavan Kumar"
+      class: "3/4, B2"
 
 - title: "Rookie Hour"
   order: "#1"
@@ -65,13 +92,14 @@
     - title: "Phase I"
       url: "https://www.hackerrank.com/rookie-hour-1"
 
+# Don't add winners beyond this. Can't support multiple links in single event
 - title: "Code Hackathon"
   order: "Week #6"
   has_ended: true
   links:
-    - title: "Contest 1"
+    - title: "Level 1"
       url: "https://www.hackerrank.com/week-6-codehackathon-part-i"
-    - title: "Contest 2"
+    - title: "Level 2"
       url: "https://www.hackerrank.com/week-6-codehackathon-part-ii"
 
 - title: "Code Hackathon"
