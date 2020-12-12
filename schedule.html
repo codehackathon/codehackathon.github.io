@@ -7,7 +7,7 @@ layout: page
 {% assign event = site.data.events[0] %}
 <div class="text-center">
 	<p class="lead">
-		{% unless event.has_ended %}Sign up for {% endunless %}{{ event.title }} 💻{% if event.has_ended %} has ended!{% endif %}
+		{% unless event.has_ended %}Sign up for {% endunless %}{{ event.title }} {{ event.order }} 💻{% if event.has_ended %} has ended!{% endif %}
 		<br />
 		{{ event.date }}, {{ event.time }}, {% if event.type == "remote" %}partipate from home!{% else %} at {{ event.venue | default: "ICT-208" }}{% endif %}
 		<br />

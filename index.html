@@ -17,10 +17,10 @@
 		</div>
 		{% assign event = site.data.events[0] %}
 		<div class="intro-content col-sm-10 offset-sm-1 col-lg-5 offset-lg-1 d-flex justify-content-center align-items-center flex-column">
-			<h3>💻 {% if event.has_ended %}You just missed{% else %}Sign up for{% endif %} {{ event.title }} 📈</h3>
+			<h3>💻 {% if event.has_ended %}You just missed{% else %}Sign up for{% endif %} {{ event.title }} {{ event.order }} 📈</h3>
 			<br />
 			<img
-				alt="{{ event.title }} Poster"
+				alt="{{ event.title }} {{ event.order }} Poster"
 				class="poster{% if event.has_ended %} old-pic{% endif %}"
 				src="assets/poster/w12.jpg"
 				style="background: rgb(26, 18, 69);"
