@@ -5,7 +5,15 @@
   register_link: "https://bit.ly/w12-reg"
   poster_link: "assets/poster/w12.jpg"
   type: "remote"
-  has_ended: false
+  has_ended: true
+#   links:
+#     - title: "Contest"
+#       url: "https://www.hackerrank.com/week-11-code-hackathon"
+#   winners:
+#     - name: "Manohar D.S."
+#       class: "2/4, B10"
+#     - name: "Sreeram T."
+#       class: "2/4, B4"
 
 - title: "Code Hackathon"
   order: "Week #11"
