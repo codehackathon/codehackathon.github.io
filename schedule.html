@@ -5,7 +5,7 @@ layout: page
 ---
 
 {% assign event = site.data.events[0] %}
-<div class="text-center">
+<article class="text-center">
 	<p class="lead">
 		{% unless event.has_ended %}Sign up for {% endunless %}{{ event.title }} {{ event.order }} 💻{% if event.has_ended %} has ended!{% endif %}
 		<br />
@@ -15,10 +15,34 @@ layout: page
 	</p>
 	<br />
 	{% if event.has_ended %}
-	<span class="btn btn-dark disabled btn-lg text-light">Event completed!</a>
+	<span class="btn btn-dark disabled btn-lg text-light">Event completed!</span>
 	{% else %}
-	<a href="{{ event.register_link }}" class="btn btn-info btn-lg text-light" target="_blank">Register</a>
+	<a href="{{ event.register_link }}" class="btn btn-info btn-lg text-light" target="_blank">Register Now!</a>
 	{% endif %}
+
+	<img
+		alt="{{ event.title }} {{ event.order }} Poster"
+		class="poster my-5{% if event.has_ended %} old-pic{% endif %}"
+		src="{{ event.poster_link }}"
+		style="background: rgb(26, 18, 69);"
+	/>
+</article>
+
+<h3>Previous events</h3>
+<div class="table-responsive">
+	<table class="table table-striped table-borderless table-hover">
+		<tbody>
+			{% for event in site.data.events %}
+			{% if event.has_ended %}
+			<tr>
+				<th scope="row">
+					{{ event.title }} {{ event.order }}{% if event.date %}: {{ event.date }}{% endif %}
+				</th>
+			</tr>
+			{% endif %}
+			{% endfor %}
+		</tbody>
+	</table>
 </div>
 
 <div id="suggestion-grid" class="mt-5">

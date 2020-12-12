@@ -22,7 +22,7 @@
 			<img
 				alt="{{ event.title }} {{ event.order }} Poster"
 				class="poster{% if event.has_ended %} old-pic{% endif %}"
-				src="assets/poster/w12.jpg"
+				src="{{ event.poster_link }}"
 				style="background: rgb(26, 18, 69);"
 			/>
 			<br />
